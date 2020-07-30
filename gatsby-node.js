@@ -13,6 +13,7 @@ exports.createPages = async ({ graphql, actions}) => {
     allMdx {
       edges {
         node {
+          slug
           frontmatter {
             slug
             title
@@ -28,7 +29,7 @@ exports.createPages = async ({ graphql, actions}) => {
       path: node.frontmatter.slug,
       component: path.resolve(`./src/templates/section.js`),
       context: {
-        slug: node.frontmatter.slug
+        slug: node.slug
       }
     })
   })

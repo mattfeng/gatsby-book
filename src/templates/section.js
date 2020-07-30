@@ -33,6 +33,7 @@ query($slug: String!) {
     body
     frontmatter {
       title
+      slug
     }
   }
 }
