@@ -1,4 +1,5 @@
 module.exports = {
+  prefixPath: "/",
   plugins: [
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sass`,
@@ -26,6 +27,9 @@ module.exports = {
               linkImagesToOriginal: false,
               disableBgImageOnAlpha: true,
             }
+          },
+          {
+            resolve: `gatsby-remark-highlight-code`
           }
         ],
       },
