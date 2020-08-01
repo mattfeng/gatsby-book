@@ -1,5 +1,5 @@
 module.exports = {
-  prefixPath: "/",
+  pathPrefix: "/",
   plugins: [
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sass`,
