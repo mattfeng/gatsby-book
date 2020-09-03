@@ -8,17 +8,22 @@ import React, { Component } from "react"
 import Layout from "../components/layout"
 import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
+import styles from "./section.module.scss"
+import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader"
 
 require(`katex/dist/katex.min.css`)
+deckDeckGoHighlightElement()
 
 class Section extends Component {
   render() {
     return (
       <Layout>
+        <div className={styles.sectionContainer}>
         <h1>{ this.props.data.mdx.frontmatter.title }</h1>
         <MDXRenderer>
           { this.props.data.mdx.body }
         </MDXRenderer>
+        </div>
       </Layout>
     )
   }
